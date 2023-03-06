@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideHustle Week1 Project</title>
+    <style>
+      header {
+        display: flex;
+        justify-content: center;
+      }
+      form {
+        width: 50%;
+        margin: auto;
+      }
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--feildSetColour);
+      }
+      fieldset > * {
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      input {
+        width: 100%;
+      }
+      button {
+        align-self: center;
+        width: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to Marnin's Week1 project</h1>
+    </header>
+    <main>
+      <form action="#">
+        <fieldset>
+          <legend>Join the Week1 finalists</legend>
+          <label for="fullName"
+            >Full Name
+            <input
+              type="text"
+              name="fullName"
+              id="name"
+              placeholder="John Doe"
+              required
+          /></label>
+          <label for="email"
+            >Email
+            <input
+              type="email"
+              name="email"
+              placeholder="johnDoe@gmail.com"
+              required
+          /></label>
+          <label for="phone"
+            >Phone Number<input
+              type="tel"
+              name="phone"
+              placeholder="08010101010"
+              required
+          /></label>
+          <select>
+            <option value="null">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+          <label for="password"
+            >Password<input
+              type="password"
+              name="password"
+              placeholder="*******"
+              required
+          /></label>
+          <button type="submit" onclick="congratulations()">Submit</button>
+        </fieldset>
+      </form>
+    </main>
+    <script>
+      function congratulations() {
+        const name = document.getElementById("name").value;
+        alert(name + "'s message was submitted successfully");
+      }
+    </script>
+  </body>
+</html>
