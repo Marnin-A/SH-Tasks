@@ -54,6 +54,7 @@
             <input
               type="email"
               name="email"
+              id="email"
               placeholder="johnDoe@gmail.com"
               required
           /></label>
@@ -61,10 +62,11 @@
             >Phone Number<input
               type="tel"
               name="phone"
+              id="tel"
               placeholder="08010101010"
               required
           /></label>
-          <select>
+          <select id="gender">
             <option value="null">Select gender</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
@@ -73,6 +75,7 @@
             >Password<input
               type="password"
               name="password"
+              id="password"
               placeholder="*******"
               required
           /></label>
@@ -83,7 +86,16 @@
     <script>
       function congratulations() {
         const name = document.getElementById("name").value;
-        alert(name + "'s message was submitted successfully");
+        const email = document.getElementById("email").value;
+        const tel = document.getElementById("tel").value;
+        const gender = document.getElementById("gender").value;
+        const password = document.getElementById("password").value;
+        if (name && email && tel && gender && password != "") {
+          alert(name + "'s message was submitted successfully");
+        }
+        if (name) {
+          alert("Hey " + name + ", please fill in the remaining details");
+        }
       }
     </script>
   </body>
