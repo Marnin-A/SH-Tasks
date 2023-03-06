@@ -17,7 +17,6 @@
       fieldset {
         display: flex;
         flex-direction: column;
-        background-color: var(--feildSetColour);
       }
       fieldset > * {
         margin-top: 1em;
@@ -85,14 +84,17 @@
     </main>
     <script>
       function congratulations() {
+        // Get elements to be used
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const tel = document.getElementById("tel").value;
         const gender = document.getElementById("gender").value;
         const password = document.getElementById("password").value;
+        // Check if all the elements are empty, if true execute the alert
         if (name && email && tel && gender && password != "") {
           alert(name + "'s message was submitted successfully");
         }
+        // Check if name exists, if true execute the alert
         if (name) {
           alert("Hey " + name + ", please fill in the remaining details");
         }
