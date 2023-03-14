@@ -4,41 +4,34 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SideHustle Week1 Project</title>
-    <style>
-      header {
-        display: flex;
-        justify-content: center;
-      }
-      form {
-        width: 50%;
-        margin: auto;
-      }
-      fieldset {
-        display: flex;
-        flex-direction: column;
-      }
-      fieldset > * {
-        margin-top: 1em;
-        margin-bottom: 1em;
-      }
-      input {
-        width: 100%;
-      }
-      button {
-        align-self: center;
-        width: 30%;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script
+      src="https://kit.fontawesome.com/3065f56328.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3065f56328.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>SideHustle Week2 Project</title>
   </head>
   <body>
     <header>
-      <h1>Welcome to Marnin's Week1 project</h1>
+      <h1>Welcome to Marnin's Week2 project</h1>
     </header>
     <main>
       <form action="#">
         <fieldset>
-          <legend>Join the Week1 finalists</legend>
+          <legend>Join the Week2 finalists</legend>
           <label for="fullName"
             >Full Name
             <input
@@ -90,13 +83,19 @@
         const tel = document.getElementById("tel").value;
         const gender = document.getElementById("gender").value;
         const password = document.getElementById("password").value;
+
         // Check if all the elements are empty, if true execute the alert
-        if (name && email && tel && gender && password != "") {
-          alert(name + "'s message was submitted successfully");
-        }
-        // Check if name exists, if true execute the alert
-        if (name) {
-          alert("Hey " + name + ", please fill in the remaining details");
+        if (
+          name !== "" &&
+          email !== "" &&
+          tel !== "" &&
+          password !== "" &&
+          gender !== null
+        ) {
+          // console.log(name + "\n"+email+ "\n"+tel+ "\n"+gender+ "\n"+password);
+          alert(name + "'s details were submitted successfully 🎉🎉");
+        } else {
+          alert("❌ Hey " + name + ", please fill in the remaining details");
         }
       }
     </script>
